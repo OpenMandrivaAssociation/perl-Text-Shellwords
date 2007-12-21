@@ -15,6 +15,7 @@ Source:         http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.
 BuildRequires:  perl-devel
 %endif
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This used to be a wrapper around shellwords.pl, but has now been superseded by
