@@ -1,7 +1,7 @@
 %define module  Text-Shellwords
 %define name    perl-%{module}
 %define version 1.08
-%define release %mkrel 4
+%define release %mkrel 6
 
 Name:           %{name}
 Version:        %{version}
