@@ -1,15 +1,13 @@
 %define upstream_name    Text-Shellwords
-%define upstream_version 1.08
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	1.08
+Release:	5
 
 Summary:	Thin wrapper around shellwords.pl
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,7 +19,7 @@ Text::ParseWords. Use that module instead. If you use this module, it will
 simply report the shellwords() function from Text::ParseWords.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -41,9 +39,7 @@ make test
 %changelog
 * Sat Aug 01 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.80.0-1mdv2010.0
 + Revision: 405715
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.08-6mdv2009.0
+- rebuild using %1.08 Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.08-6mdv2009.0
 + Revision: 242050
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
